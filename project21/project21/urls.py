@@ -23,4 +23,12 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',register,name='register'),
+    path('home/',home,name='home'),
+    path('user_login/',user_login,name='user_login'),
+
+    path('user_logout/',user_logout,name='user_logout'),
+    path('display_data/',display_data,name='display_data'),
+    path('change_password/',change_password,name='change_password'),
+    path('reset_password/',reset_password,name='reset_password'),
+    path('verify_otp/', verify_otp, name='verify_otp'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
